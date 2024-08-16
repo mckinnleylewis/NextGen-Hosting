@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket System</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Support Ticket System</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="support.html" class="nav-link">Support Tickets</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="home-content">
+            <h2>Submit a Ticket</h2>
+            <form id="ticket-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="issue">Issue:</label>
+                <textarea id="issue" name="issue" rows="4" required></textarea>
+
+                <button type="submit" class="button">Submit Ticket</button>
+            </form>
+        </section>
+
+        <section class="support">
+            <h2>Support Tickets</h2>
+            <ul id="ticket-list">
+                <!-- Tickets will be added here dynamically -->
+            </ul>
+            <li class="ticket-item">
+                <h3>Ticket ID: <span class="ticket-id">[Ticket ID]</span> - Ticket from [Name]</h3>
+                <p>Email: [Email]</p>
+                <p>Issue: [Issue]</p>
+                <p>Status: <span class="status">Open</span></p>
+                <p>Submitted Date: [Submission Date]</p>
+                <p class="ticket-creator-id" style="display: none;">[Creator ID]</p>
+                <p class="admin-id" style="display: none;">[Admin ID]</p>
+                <div class="message-history" style="display: none;"></div>
+                <div class="message-area" style="display: none;">
+                    <textarea class="message-input" placeholder="Type your message here..." rows="3"></textarea>
+                    <button class="send-message-button">Send Message</button>
+                </div>
+            </li>                       
+        </section>
+    </div>
+
+    <div class="container home-content">
+        <h2>Having Issues With The Tickets?</h2>
+        <p>Head To Our Discord And Open A Ticket Our Team Provides Great Support There Like They Do There!!</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Support Ticket System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

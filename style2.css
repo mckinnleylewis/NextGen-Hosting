@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpaperset.com/w/full/4/8/c/427338.jpg');
+    background-size: cover;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.header, .footer, .container {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.nav-link {
+    position: relative;
+    color: #fff;
+    margin: 0 1.5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #f39c12;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: #f39c12;
+}
+
+.container {
+    padding: 4em 2em;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.home-content, .services, .pricing, .contact, .products, .cart, .support {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    color: #f39c12;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5em 0 0.2em;
+}
+
+input, textarea {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.button {
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    background: #f39c12;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    background: #d35400;
+    transform: scale(1.05);
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #fff;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover::after {
+    width: 100%;
+    left: 0;
+    background: #fff;
+}
+
+#ticket-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ticket-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-item h3 {
+    margin: 0 0 10px;
+}
+
+.ticket-item p {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+.ticket-item button {
+    background-color: #f44336;
+}
+
+.ticket-item button:hover {
+    background-color: #e53935;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
